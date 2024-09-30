@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Continental University Registration</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="form-container">
+  <!-- Form for collecting student details -->
+  <form id="registrationForm">
+    <h1>Student Registration</h1>
+    
+    <label for="studentType">Student Type:</label>
+    <select id="studentType">
+      <option value="b">Bachelor</option>
+      <option value="m">Master</option>
+    </select>
+
+    <label for="residency">Residency:</label>
+    <select id="residency">
+      <option value="i">In-State</option>
+      <option value="o">Out-State</option>
+    </select>
+
+    <label for="credits">Number of Credits:</label>
+    <input type="number" id="credits" min="1" value="12">
+
+    <button type="button" onclick="calculateFees()">Submit</button>
+  </form>
+
+  <div id="output" class="result" style="display: none;">
+    <h2>Fees Breakdown</h2>
+    <p>Registration Fee: $<span id="registrationFee"></span></p>
+    <p>Tuition Rate (per credit): $<span id="tuitionRate"></span></p>
+    <p>Tuition Fee: $<span id="tuitionFee"></span></p>
+    <p><strong>Total Fee: $<span id="totalFee"></span></strong></p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
